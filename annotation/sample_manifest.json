@@ -3,10 +3,10 @@
   "per_cell": 30,
   "overlap": 0.25,
   "annotators": [
-    "alice",
-    "bob",
-    "carol",
-    "dave"
+    "berickal",
+    "emmanuel",
+    "kader",
+    "test"
   ],
   "n_items": 300,
   "n_overlap": 75,
