@@ -236,7 +236,7 @@ function guidelines(){
   g.addEventListener("toggle",()=>{ if(!g.open) localStorage.setItem("abv4_guide_seen","1"); });
   g.append(el("summary",{},
     el("span",{className:"chev",textContent:"▸"}),
-    "Task & guidelines — read once, then collapse"));
+    "Task & guidelines"));
   const b = el("div",{className:"body"});
   b.innerHTML = `
   <h4>What this is</h4>
