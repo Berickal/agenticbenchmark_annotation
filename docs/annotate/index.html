@@ -3,63 +3,147 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgenticBenchmark v4 — Mutation Annotation</title>
+<title>AgenticBenchmark — Mutation Annotation</title>
 <style>
   :root{
-    --bg:#f6f7f9; --card:#fff; --ink:#1b1f24; --muted:#6b7280; --line:#e3e6ea;
-    --accent:#2563eb; --good:#15803d; --bad:#b91c1c; --warn:#b45309;
-    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --bg:#f4f5f7; --card:#ffffff; --card-2:#fafbfc; --ink:#1c2024; --ink-2:#3d434b;
+    --muted:#6b7280; --line:#e4e7eb; --line-2:#eef0f3;
+    --accent:#3b5bdb; --accent-soft:#eef2ff; --accent-ink:#2f45b0;
+    --good:#1a7f37; --good-soft:#eafbf0; --bad:#c02636; --bad-soft:#fdeef0;
+    --warn:#a35b00; --warn-soft:#fff4e2;
+    --shadow:0 1px 2px rgba(18,22,31,.04), 0 6px 20px rgba(18,22,31,.06);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --radius:12px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0f1115; --card:#171a20; --card-2:#1c2027; --ink:#e7e9ec; --ink-2:#c3c8cf;
+      --muted:#8b929c; --line:#282d36; --line-2:#20242c;
+      --accent:#7c93f5; --accent-soft:#1c2340; --accent-ink:#aab6fb;
+      --good:#4ac776; --good-soft:#12291b; --bad:#f2748a; --bad-soft:#2c141a;
+      --warn:#e0a35a; --warn-soft:#2a2013;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-  header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);
-    padding:10px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-  header .who{font-weight:600}
-  header .bar{flex:1;height:8px;background:var(--line);border-radius:99px;overflow:hidden;min-width:120px}
-  header .bar > i{display:block;height:100%;background:var(--accent);width:0}
-  header .count{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-  button{font:inherit;padding:6px 12px;border:1px solid var(--line);background:var(--card);
-    border-radius:8px;cursor:pointer}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--sans);
+    -webkit-font-smoothing:antialiased}
+  a{color:var(--accent-ink)}
+  code{font-family:var(--mono);font-size:.9em;background:var(--line-2);padding:.1em .35em;border-radius:5px}
+  kbd{font-family:var(--mono);font-size:.82em;background:var(--card);border:1px solid var(--line);
+    border-bottom-width:2px;border-radius:5px;padding:.1em .4em;color:var(--ink-2)}
+
+  /* ── header ── */
+  header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--card) 88%,transparent);
+    backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line);
+    padding:9px 18px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  header .brand{font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+  header .who{font-weight:600;color:var(--accent-ink);background:var(--accent-soft);
+    padding:2px 10px;border-radius:99px;font-size:13px}
+  header .bar{flex:1;height:7px;background:var(--line);border-radius:99px;overflow:hidden;min-width:120px}
+  header .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-ink));
+    width:0;transition:width .25s ease}
+  header .count{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px}
+
+  button{font:inherit;font-weight:500;padding:7px 13px;border:1px solid var(--line);background:var(--card);
+    color:var(--ink);border-radius:9px;cursor:pointer;transition:border-color .12s,background .12s,transform .05s}
   button:hover{border-color:var(--accent)}
+  button:active{transform:translateY(1px)}
   button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-  main{max-width:1180px;margin:0 auto;padding:16px}
-  .setup{max-width:520px;margin:8vh auto;background:var(--card);border:1px solid var(--line);
-    border-radius:12px;padding:24px}
-  .setup h1{font-size:18px;margin:0 0 8px}
-  .setup p{color:var(--muted)}
-  .setup a{display:block;margin:6px 0;color:var(--accent)}
-  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-  .tag{font-size:12px;padding:2px 9px;border-radius:99px;background:#eef2ff;color:#3730a3;font-weight:600}
-  .tag.flag{background:#fef3c7;color:var(--warn)}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media(max-width:860px){.cols{grid-template-columns:1fr}}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
-  .panel h3{margin:0 0 8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-  .panel .lbl{font-size:12px;color:var(--muted);margin:10px 0 3px}
-  pre.txt{white-space:pre-wrap;word-break:break-word;font-family:var(--mono);font-size:13px;
-    background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:10px;margin:0;max-height:46vh;overflow:auto}
-  details{margin-top:8px}
-  details summary{cursor:pointer;color:var(--accent);font-size:13px}
-  .rubric{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px}
-  .q{padding:9px 0;border-bottom:1px dashed var(--line)}
+  button.primary:hover{filter:brightness(1.06)}
+  button.ghost{background:transparent}
+
+  main{max-width:1160px;margin:0 auto;padding:18px 18px 96px}
+
+  /* ── setup / picker ── */
+  .setup{max-width:560px;margin:9vh auto;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .setup h1{font-size:19px;margin:0 0 6px}
+  .setup p{color:var(--muted);margin:.4em 0}
+  .setup a.pick{display:block;margin:8px 0;padding:10px 14px;border:1px solid var(--line);border-radius:9px;
+    text-decoration:none;color:var(--ink);font-weight:600}
+  .setup a.pick:hover{border-color:var(--accent);background:var(--accent-soft)}
+
+  /* ── guidelines ── */
+  .guide{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);margin-bottom:18px;overflow:hidden}
+  .guide > summary{cursor:pointer;list-style:none;padding:13px 18px;font-weight:650;
+    display:flex;align-items:center;gap:9px}
+  .guide > summary::-webkit-details-marker{display:none}
+  .guide > summary .chev{transition:transform .2s;color:var(--muted)}
+  .guide[open] > summary .chev{transform:rotate(90deg)}
+  .guide[open] > summary{border-bottom:1px solid var(--line)}
+  .guide .body{padding:6px 20px 18px}
+  .guide h4{margin:18px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .guide p{margin:.5em 0;color:var(--ink-2)}
+  .guide ul{margin:.4em 0;padding-left:1.2em}
+  .guide li{margin:.3em 0;color:var(--ink-2)}
+  .callout{border-left:3px solid var(--warn);background:var(--warn-soft);border-radius:0 8px 8px 0;
+    padding:10px 14px;margin:12px 0}
+  .callout.key{border-color:var(--accent)}
+  .callout b{color:var(--ink)}
+  .glossary{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:6px}
+  .glossary dt{font-weight:650;color:var(--ink)}
+  .glossary dd{margin:0;color:var(--ink-2)}
+
+  /* ── item card ── */
+  .badges{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .tag{font-size:11.5px;padding:3px 10px;border-radius:99px;background:var(--accent-soft);
+    color:var(--accent-ink);font-weight:650;letter-spacing:.01em}
+  .tag.kind{background:var(--line-2);color:var(--ink-2)}
+  .tag.flag{background:var(--warn-soft);color:var(--warn)}
+  .tag.changed{background:var(--good-soft);color:var(--good)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:880px){.cols{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px;box-shadow:var(--shadow)}
+  .panel.mut{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+  .panel h3{margin:0;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:7px}
+  .panel h3 .dot{width:7px;height:7px;border-radius:99px;background:var(--muted)}
+  .panel.mut h3 .dot{background:var(--accent)}
+  .panel .lbl{font-size:11.5px;font-weight:600;color:var(--muted);margin:13px 0 4px;letter-spacing:.02em}
+  pre.txt{white-space:pre-wrap;word-break:break-word;font-family:var(--mono);font-size:12.5px;line-height:1.55;
+    background:var(--card-2);border:1px solid var(--line-2);border-radius:9px;padding:11px 12px;margin:0;
+    max-height:44vh;overflow:auto}
+  pre.txt.empty{color:var(--bad);font-style:italic}
+  details.more{margin-top:10px}
+  details.more summary{cursor:pointer;color:var(--accent-ink);font-size:12.5px;font-weight:600}
+  details.more[open] summary{margin-bottom:6px}
+
+  /* ── rubric ── */
+  .rubric{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:6px 18px;margin-top:18px;box-shadow:var(--shadow)}
+  .q{padding:13px 0;border-bottom:1px solid var(--line-2)}
   .q:last-child{border-bottom:0}
-  .q .qt{font-weight:600;margin-bottom:6px}
-  .q .qh{font-weight:400;color:var(--muted);font-size:13px}
-  .opts{display:flex;gap:6px;flex-wrap:wrap}
-  .opts label{border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer;font-size:14px}
-  .opts input{position:absolute;opacity:0;width:0}
-  .opts input:checked + span{font-weight:700}
-  .opts label:has(input:checked){border-color:var(--accent);background:#eff6ff}
-  .opts label.accept:has(input:checked){border-color:var(--good);background:#f0fdf4;color:var(--good)}
-  .opts label.reject:has(input:checked){border-color:var(--bad);background:#fef2f2;color:var(--bad)}
-  textarea{width:100%;font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px;min-height:52px;resize:vertical}
-  nav{display:flex;gap:10px;align-items:center;margin:16px 0;flex-wrap:wrap}
+  .q .qt{font-weight:650;margin-bottom:7px}
+  .q .qh{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
+  .opts{display:flex;gap:7px;flex-wrap:wrap}
+  .opts label{position:relative;border:1px solid var(--line);border-radius:9px;padding:6px 14px;cursor:pointer;
+    font-size:14px;user-select:none;transition:border-color .1s,background .1s,color .1s}
+  .opts label:hover{border-color:var(--accent)}
+  .opts input{position:absolute;opacity:0;width:0;height:0}
+  .opts label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);
+    color:var(--accent-ink);font-weight:700}
+  .opts label.accept:has(input:checked){border-color:var(--good);background:var(--good-soft);color:var(--good)}
+  .opts label.reject:has(input:checked){border-color:var(--bad);background:var(--bad-soft);color:var(--bad)}
+  textarea{width:100%;font:inherit;background:var(--card-2);border:1px solid var(--line);border-radius:9px;
+    padding:9px 11px;min-height:56px;resize:vertical;color:var(--ink)}
+  textarea:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+
+  /* ── nav ── */
+  nav{display:flex;gap:9px;align-items:center;margin:18px 0 6px;flex-wrap:wrap}
   nav .spacer{flex:1}
-  .jump{width:64px;text-align:center;font:inherit;padding:5px;border:1px solid var(--line);border-radius:8px}
-  .done-dot{width:9px;height:9px;border-radius:99px;background:var(--line);display:inline-block}
-  .done-dot.on{background:var(--good)}
-  .hint{color:var(--muted);font-size:12px}
+  .jump{width:64px;text-align:center;font:inherit;padding:6px;border:1px solid var(--line);
+    border-radius:9px;background:var(--card);color:var(--ink)}
+  .done-dot{width:10px;height:10px;border-radius:99px;background:var(--line);display:inline-block;
+    box-shadow:0 0 0 3px var(--line-2)}
+  .done-dot.on{background:var(--good);box-shadow:0 0 0 3px var(--good-soft)}
+  .hint{color:var(--muted);font-size:12px;margin-top:8px}
+  .hint kbd{margin:0 1px}
 </style>
 </head>
 <body>
@@ -67,30 +151,37 @@
 
 <script>
 const RUBRIC = [
-  {k:"wellformed", t:"Well-formed & solvable?", h:"The mutated problem makes sense and can actually be answered.",
+  {k:"wellformed", t:"Well-formed & solvable?",
+   h:"The mutated problem is coherent and can actually be answered as stated (no missing info, no contradiction, no garbled text).",
    opts:[["yes","Yes"],["no","No"]]},
-  {k:"faithful", t:"Faithful transformation", h:"Tests the same skill/knowledge at comparable difficulty. 1 = unrelated/much easier or harder, 4 = same competency & difficulty.",
+  {k:"faithful", t:"Same skill & comparable difficulty? (1–4)",
+   h:"Does solving the mutated item exercise the same kind of reasoning/knowledge, at a similar difficulty, as the original? This is NOT about getting the same answer. 1 = unrelated or much easier/harder · 4 = same competency & difficulty.",
    opts:[["1","1"],["2","2"],["3","3"],["4","4"]]},
-  {k:"answer_correct", t:"Reference answer correct for the mutated item?", h:"The shown expected answer is actually right for the mutated problem.",
+  {k:"answer_correct", t:"Reference answer correct for the mutated item?",
+   h:"Independently work out the mutated problem and check the shown expected answer (and, for code, the reference solution).",
    opts:[["yes","Yes"],["no","No"],["unsure","Unsure"]]},
-  {k:"tests_ok", t:"Updated tests valid & consistent? (code only)", h:"Assertions are well-formed and match the reference solution.",
+  {k:"tests_ok", t:"Updated tests valid & consistent? (code only)",
+   h:"The assertions are syntactically valid and every one of them agrees with the shown reference solution.",
    opts:[["yes","Yes"],["no","No"],["na","N/A"]], codeOnly:true},
-  {k:"no_leak", t:"No answer leak / hint in the prompt?", h:"The mutated input does not state or strongly hint the answer (passage-grounded RC excepted).",
+  {k:"no_leak", t:"No answer leak / hint in the prompt?",
+   h:"The mutated input does not state or strongly telegraph the answer. Exception: for reading-comprehension items the answer is meant to be recoverable from the passage — that is not a leak.",
    opts:[["yes","Yes"],["no","No"]]},
-  {k:"verdict", t:"Overall verdict", h:"Accept = usable as a mutated benchmark item. Reject = should be discarded.",
+  {k:"verdict", t:"Overall verdict",
+   h:"Accept = a usable mutated benchmark item. Reject = discard it (broken, wrong reference answer, leaked, or not really testing the same thing).",
    opts:[["accept","Accept"],["reject","Reject"]], cls:true},
 ];
 const REQUIRED = RUBRIC.filter(q=>!q.codeOnly).map(q=>q.k);
 
 const $ = (s,el=document)=>el.querySelector(s);
-const el = (t,props={},...kids)=>{const e=document.createElement(t);Object.assign(e,props);
-  for(const k of kids) e.append(k); return e;};
+const el = (t,props={},...kids)=>{const e=document.createElement(t);
+  for(const k in props){ if(k==="html") e.innerHTML=props[k]; else e[k]=props[k]; }
+  for(const k of kids) if(k!=null&&k!=="") e.append(k); return e;};
 
 let POOL=[], KEYSET=[], ANNOT=null, STORE={}, idx=0;
 
-function storeKey(){ return "abv4_annot_"+ANNOT; }
-function load(){ try{ STORE = JSON.parse(localStorage.getItem(storeKey())||"{}"); }catch{ STORE={}; } }
-function save(){ try{ localStorage.setItem(storeKey(), JSON.stringify(STORE)); }catch{} }
+const skKey = ()=>"abv4_annot_"+ANNOT;
+function load(){ try{ STORE = JSON.parse(localStorage.getItem(skKey())||"{}"); }catch{ STORE={}; } }
+function save(){ try{ localStorage.setItem(skKey(), JSON.stringify(STORE)); }catch{} }
 function rec(id){ return STORE[id] || (STORE[id]={}); }
 function isDone(id){ const r=STORE[id]||{}; return REQUIRED.every(k=>r[k]!=null && r[k]!==""); }
 function doneCount(){ return KEYSET.filter(isDone).length; }
@@ -104,14 +195,15 @@ async function boot(){
       fetch("assignments.json").then(r=>r.json()).catch(()=>({})),
     ]);
     POOL = p; assignments = a;
-  }catch(e){ $("#app").innerHTML = "<main><p>Could not load <code>pool.json</code>. "
-      +"Serve this folder over http (GitHub Pages or <code>python -m http.server</code>).</p></main>"; return; }
-
+  }catch(e){
+    $("#app").replaceChildren(el("main",{},el("div",{className:"setup",html:
+      "<h1>Could not load <code>pool.json</code></h1><p>This page must be served over HTTP — "
+      +"open it via GitHub Pages, or run <code>python -m http.server</code> in this folder.</p>"})));
+    return;
+  }
   const want = params.get("annotator");
   const names = Object.keys(assignments);
-  if(!want || (names.length && !names.includes(want))){
-    renderSetup(names); return;
-  }
+  if(!want || (names.length && !names.includes(want))){ renderSetup(names); return; }
   ANNOT = want;
   const allow = assignments[ANNOT];
   const byId = Object.fromEntries(POOL.map(it=>[it.id,it]));
@@ -126,36 +218,102 @@ async function boot(){
 
 function renderSetup(names){
   const wrap = el("div",{className:"setup"});
-  wrap.append(el("h1",{textContent:"Mutation annotation"}));
+  wrap.append(el("h1",{textContent:"Mutation-quality annotation"}));
+  wrap.append(el("p",{textContent:"You’ll judge whether machine-generated variants of benchmark problems are usable. Open your personal link:"}));
   if(names.length){
-    wrap.append(el("p",{textContent:"Open your assigned link:"}));
-    names.forEach(n=> wrap.append(el("a",{href:"?annotator="+encodeURIComponent(n),textContent:"?annotator="+n})));
+    names.forEach(n=> wrap.append(el("a",{className:"pick",href:"?annotator="+encodeURIComponent(n),textContent:n})));
   }else{
-    wrap.append(el("p",{textContent:"No assignments.json found — append ?annotator=yourname to the URL."}));
+    wrap.append(el("p",{html:"No <code>assignments.json</code> found — append <code>?annotator=yourname</code> to the URL."}));
   }
-  $("#app").replaceChildren(wrap);
+  $("#app").replaceChildren(el("main",{},wrap));
+}
+
+/* ── guidelines panel ── */
+function guidelines(){
+  const seen = localStorage.getItem("abv4_guide_seen")==="1";
+  const g = el("details",{className:"guide"});
+  g.open = !seen;
+  g.addEventListener("toggle",()=>{ if(!g.open) localStorage.setItem("abv4_guide_seen","1"); });
+  g.append(el("summary",{},
+    el("span",{className:"chev",textContent:"▸"}),
+    "Task & guidelines — read once, then collapse"));
+  const b = el("div",{className:"body"});
+  b.innerHTML = `
+  <h4>What this is</h4>
+  <p>An automated pipeline takes an existing benchmark problem (HumanEval, MBPP, GSM8K,
+  TruthfulQA, BBC reading-comprehension) and rewrites it with an LLM to produce a
+  <b>mutated</b> variant with a new scenario, new numbers, sometimes a changed question plus an
+  updated reference answer (and updated unit tests for code). The point is to test whether a
+  model really reasons or just recognises memorised benchmark items.</p>
+  <p>Your job: for each item, evaluate the <b>mutated</b> version
+     and decide whether the mutated item is a <b>valid, usable</b> benchmark problem.</p>
+
+  <h4>How it works</h4>
+  <ul>
+    <li>Answer the short rubric under each item. It auto-saves in this browser as you go.</li>
+    <li>Use <kbd>←</kbd>/<kbd>→</kbd> to move, number keys and <kbd>Y</kbd>/<kbd>N</kbd>/<kbd>U</kbd>
+        to fill the next unanswered row, <em>Next unanswered</em> to skip ahead.</li>
+    <li>When finished (or done for the session) click <b>Export</b> and send the downloaded
+        <code>annotations_&lt;you&gt;.json</code> to the Euraste.</li>
+    <li>Work in a single browser on one machine because progress lives only in local storage.</li>
+  </ul>
+
+  <div class="callout key"><b>The mutated problem does NOT need to have the same answer as the
+  original, and does not need to be “semantically equivalent”.</b> The pipeline deliberately
+  produces transformations that change what must be computed (different quantities, an inverted
+  condition, an added constraint, a reframed question). A different answer is expected and fine.
+  What matters is that the mutated item is a coherent problem of comparable difficulty that
+  exercises the same underlying skill, <i>and</i> that the shown reference answer is correct
+  <i>for the mutated problem</i>.</div>
+
+  <div class="callout"><b>The reference answer was also produced by an LLM</b> and may be wrong.
+  Checking it (“Reference answer correct?”) is one of the main reasons this review exists. You can test
+  the mutated problem yourself before answering.</div>
+
+  <div class="callout"><b>You are blind to which model generated each mutation.</b> Judge every
+  item on its own merits. Don’t reward or penalise an item for looking similar to, or very
+  different from, the original.</div>
+
+  <div class="callout"><b>Reading-comprehension items (BBC):</b> the answer is meant to be
+  recoverable from the passage. That is not an “answer leak”. A leak is when the question or
+  passage <i>states</i> the answer so directly that no reasoning is needed.</div>
+
+  <h4>Rubric</h4>
+  <dl class="glossary">
+    <dt>Well-formed &amp; solvable</dt><dd>Coherent, complete, answerable as written. Empty or garbled input → No.</dd>
+    <dt>Same skill &amp; difficulty (1–4)</dt><dd>Same kind of reasoning/knowledge at a similar level. Not about matching the answer.</dd>
+    <dt>Reference answer correct</dt><dd>Solve the mutated item yourself; does the shown expected answer match? “Unsure” if you genuinely can’t verify.</dd>
+    <dt>Updated tests valid (code)</dt><dd>Assertions parse and every one agrees with the shown reference solution.</dd>
+    <dt>No answer leak / hint</dt><dd>Prompt doesn’t give the answer away (RC passages excepted, see above).</dd>
+    <dt>Overall verdict</dt><dd><b>Accept</b> a usable item; <b>Reject</b> if broken, wrong reference answer, leaked, or not testing the same thing. Add a note when you reject.</dd>
+  </dl>`;
+  g.append(b);
+  return g;
 }
 
 function renderApp(){
   const app = $("#app"); app.replaceChildren();
 
   const head = el("header");
+  head.append(el("span",{className:"brand",textContent:"Mutation Annotation"}));
   head.append(el("span",{className:"who",textContent:ANNOT}));
   const bar = el("div",{className:"bar"}); const fill=el("i"); bar.append(fill);
   const count = el("span",{className:"count"});
   head.append(bar,count);
-  const exp = el("button",{className:"primary",textContent:"Export ⬇",onclick:exportJSON});
-  head.append(exp);
+  head.append(el("button",{className:"ghost",textContent:"Guidelines",onclick:()=>{
+    const g=$(".guide"); if(g){ g.open=true; g.scrollIntoView({behavior:"smooth"}); }}}));
+  head.append(el("button",{className:"primary",textContent:"Export ⬇",onclick:exportJSON}));
   app.append(head);
 
   const main = el("main");
+  main.append(guidelines());
   const host = el("div",{id:"card"});
   main.append(host);
   app.append(main);
 
   window._refresh = ()=>{
     const total=KEYSET.length, done=doneCount();
-    fill.style.width = (100*done/total).toFixed(1)+"%";
+    fill.style.width = (100*done/Math.max(total,1)).toFixed(1)+"%";
     count.textContent = `item ${idx+1} / ${total} · ${done} done`;
     renderCard(host);
   };
@@ -166,39 +324,42 @@ function renderCard(host){
   const it = POOL[idx]; const r = rec(it.id);
   const c = el("div");
 
+  const changed = String(it.expected_answer ?? "") !== String(it.original_output ?? "");
   const badges = el("div",{className:"badges"});
   badges.append(el("span",{className:"tag",textContent:it.benchmark}));
-  badges.append(el("span",{className:"tag",textContent:it.kind}));
+  badges.append(el("span",{className:"tag kind",textContent:it.kind}));
+  if(changed) badges.append(el("span",{className:"tag changed",textContent:"answer changed — expected"}));
   (it.triage_flags||[]).forEach(f=> badges.append(el("span",{className:"tag flag",textContent:"⚑ "+f})));
   c.append(badges);
 
   const cols = el("div",{className:"cols"});
 
   const left = el("div",{className:"panel"});
-  left.append(el("h3",{textContent:"Original"}));
+  left.append(el("h3",{},el("span",{className:"dot"}),"Original"));
   left.append(el("div",{className:"lbl",textContent:"Input"}));
   left.append(el("pre",{className:"txt",textContent:it.original_input||"—"}));
   left.append(el("div",{className:"lbl",textContent:it.kind==="code"?"Reference solution":"Reference answer"}));
   left.append(el("pre",{className:"txt",textContent:String(it.original_output??"—")}));
   if(it.original_tests){
-    const d=el("details"); d.append(el("summary",{textContent:"original tests"}));
+    const d=el("details",{className:"more"}); d.append(el("summary",{textContent:"original tests"}));
     d.append(el("pre",{className:"txt",textContent:fmtTests(it.original_tests)})); left.append(d);
   }
   cols.append(left);
 
-  const right = el("div",{className:"panel"});
-  right.append(el("h3",{textContent:"Mutated"}));
+  const right = el("div",{className:"panel mut"});
+  right.append(el("h3",{},el("span",{className:"dot"}),"Mutated — judge this"));
   right.append(el("div",{className:"lbl",textContent:"Input"}));
-  right.append(el("pre",{className:"txt",textContent:it.modified_input||"(empty)"}));
+  const modEmpty = !String(it.modified_input||"").trim();
+  right.append(el("pre",{className:"txt"+(modEmpty?" empty":""),textContent:it.modified_input||"(empty — likely reject)"}));
   right.append(el("div",{className:"lbl",textContent:it.kind==="code"?"Reference solution (updated)":"Expected answer (updated)"}));
   right.append(el("pre",{className:"txt",textContent:String(it.expected_answer??"—")}));
   if(it.updated_tests){
-    const d=el("details"); d.append(el("summary",{textContent:"updated tests"}));
+    const d=el("details",{className:"more"}); d.append(el("summary",{textContent:"updated tests"}));
     d.append(el("pre",{className:"txt",textContent:fmtTests(it.updated_tests)})); right.append(d);
   }
-  const rd=el("details"); rd.append(el("summary",{textContent:"transformation rule"}));
+  const rd=el("details",{className:"more"}); rd.append(el("summary",{textContent:"transformation rule (for context)"}));
   rd.append(el("pre",{className:"txt",textContent:
-    `${it.rule_name}\n\n${it.rule_description||""}\n\n${it.output_change_description||""}`.trim()}));
+    [it.rule_name, it.rule_description, it.output_change_description].filter(Boolean).join("\n\n")}));
   right.append(rd);
   cols.append(right);
   c.append(cols);
@@ -208,8 +369,7 @@ function renderCard(host){
   RUBRIC.forEach(q=>{
     if(q.codeOnly && it.kind!=="code") return;
     const box = el("div",{className:"q"});
-    box.append(el("div",{className:"qt"},q.t,
-      q.h ? el("span",{className:"qh",textContent:" "+q.h}) : ""));
+    box.append(el("div",{className:"qt"},q.t, q.h?el("span",{className:"qh",textContent:q.h}):""));
     const opts = el("div",{className:"opts"});
     q.opts.forEach(([v,txt])=>{
       const lab = el("label");
@@ -225,7 +385,7 @@ function renderCard(host){
     rub.append(box);
   });
   const nt = el("div",{className:"q"});
-  nt.append(el("div",{className:"qt",textContent:"Notes (why reject / what's wrong)"}));
+  nt.append(el("div",{className:"qt",textContent:"Notes (what’s wrong — required when rejecting)"}));
   const ta = el("textarea",{value:r.notes||"", placeholder:"optional free text"});
   ta.oninput = ()=>{ rec(it.id).notes = ta.value; save(); };
   nt.append(ta);
@@ -239,32 +399,33 @@ function renderCard(host){
   const jump = el("input",{className:"jump",type:"number",min:1,max:KEYSET.length,value:idx+1});
   jump.onchange = ()=> go(parseInt(jump.value,10)-1);
   nav.append(jump);
-  nav.append(el("span",{className:"done-dot"+(isDone(it.id)?" on":"")}));
+  nav.append(el("span",{className:"done-dot"+(isDone(it.id)?" on":""),title:isDone(it.id)?"answered":"not answered"}));
   nav.append(el("span",{className:"spacer"}));
-  const nextUndone = el("button",{textContent:"Next unanswered ⇢",onclick:()=>{
+  nav.append(el("button",{textContent:"Next unanswered ⇢",onclick:()=>{
     const n = KEYSET.findIndex((id,i)=> i>idx && !isDone(id));
     go(n>=0?n:KEYSET.findIndex(id=>!isDone(id)));
-  }});
-  nav.append(nextUndone);
+  }}));
   c.append(nav);
-  c.append(el("div",{className:"hint",textContent:
-    "Keys: ←/→ move · 1–4 or Y/N/U pick the focused row · auto-saved locally. Export when done and send the file."}));
+  c.append(el("div",{className:"hint",html:
+    "<kbd>←</kbd> <kbd>→</kbd> move · <kbd>1</kbd>–<kbd>4</kbd> / <kbd>Y</kbd> <kbd>N</kbd> <kbd>U</kbd> "
+    +"fill the next unanswered row · answers auto-save in this browser."}));
 
   host.replaceChildren(c);
 }
 
 function fmtTests(t){ return Array.isArray(t) ? t.join("\n") : String(t); }
-function go(i){ idx = Math.max(0, Math.min(KEYSET.length-1, i)); _refresh(); scrollTo(0,0); }
+function go(i){ idx = Math.max(0, Math.min(KEYSET.length-1, i)); _refresh(); scrollTo({top:0,behavior:"smooth"}); }
 
 function onKey(e){
-  if(/INPUT|TEXTAREA/.test(document.activeElement.tagName) && document.activeElement.type!=="radio") return;
+  const ae=document.activeElement;
+  if(/TEXTAREA/.test(ae.tagName)) return;
+  if(/INPUT/.test(ae.tagName) && ae.type!=="radio") return;
   if(e.key==="ArrowLeft") return go(idx-1);
   if(e.key==="ArrowRight") return go(idx+1);
   const it = POOL[idx];
   const map = {y:"yes",n:"no",u:"unsure",a:"accept",r:"reject"};
-  let val = map[e.key.toLowerCase()] ?? (/^[1-4]$/.test(e.key) ? e.key : null);
+  const val = map[e.key.toLowerCase()] ?? (/^[1-4]$/.test(e.key) ? e.key : null);
   if(val==null) return;
-  // apply to the first rubric row that offers this value and is still unanswered
   for(const q of RUBRIC){
     if(q.codeOnly && it.kind!=="code") continue;
     if(q.opts.some(([v])=>v===val) && rec(it.id)[q.k]==null){
