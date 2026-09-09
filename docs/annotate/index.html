@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgenticBenchmark v4 — Mutation Annotation</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#1b1f24; --muted:#6b7280; --line:#e3e6ea;
+    --accent:#2563eb; --good:#15803d; --bad:#b91c1c; --warn:#b45309;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);
+    padding:10px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  header .who{font-weight:600}
+  header .bar{flex:1;height:8px;background:var(--line);border-radius:99px;overflow:hidden;min-width:120px}
+  header .bar > i{display:block;height:100%;background:var(--accent);width:0}
+  header .count{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  button{font:inherit;padding:6px 12px;border:1px solid var(--line);background:var(--card);
+    border-radius:8px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  main{max-width:1180px;margin:0 auto;padding:16px}
+  .setup{max-width:520px;margin:8vh auto;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:24px}
+  .setup h1{font-size:18px;margin:0 0 8px}
+  .setup p{color:var(--muted)}
+  .setup a{display:block;margin:6px 0;color:var(--accent)}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .tag{font-size:12px;padding:2px 9px;border-radius:99px;background:#eef2ff;color:#3730a3;font-weight:600}
+  .tag.flag{background:#fef3c7;color:var(--warn)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:860px){.cols{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .panel h3{margin:0 0 8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .panel .lbl{font-size:12px;color:var(--muted);margin:10px 0 3px}
+  pre.txt{white-space:pre-wrap;word-break:break-word;font-family:var(--mono);font-size:13px;
+    background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:10px;margin:0;max-height:46vh;overflow:auto}
+  details{margin-top:8px}
+  details summary{cursor:pointer;color:var(--accent);font-size:13px}
+  .rubric{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px}
+  .q{padding:9px 0;border-bottom:1px dashed var(--line)}
+  .q:last-child{border-bottom:0}
+  .q .qt{font-weight:600;margin-bottom:6px}
+  .q .qh{font-weight:400;color:var(--muted);font-size:13px}
+  .opts{display:flex;gap:6px;flex-wrap:wrap}
+  .opts label{border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer;font-size:14px}
+  .opts input{position:absolute;opacity:0;width:0}
+  .opts input:checked + span{font-weight:700}
+  .opts label:has(input:checked){border-color:var(--accent);background:#eff6ff}
+  .opts label.accept:has(input:checked){border-color:var(--good);background:#f0fdf4;color:var(--good)}
+  .opts label.reject:has(input:checked){border-color:var(--bad);background:#fef2f2;color:var(--bad)}
+  textarea{width:100%;font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px;min-height:52px;resize:vertical}
+  nav{display:flex;gap:10px;align-items:center;margin:16px 0;flex-wrap:wrap}
+  nav .spacer{flex:1}
+  .jump{width:64px;text-align:center;font:inherit;padding:5px;border:1px solid var(--line);border-radius:8px}
+  .done-dot{width:9px;height:9px;border-radius:99px;background:var(--line);display:inline-block}
+  .done-dot.on{background:var(--good)}
+  .hint{color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+const RUBRIC = [
+  {k:"wellformed", t:"Well-formed & solvable?", h:"The mutated problem makes sense and can actually be answered.",
+   opts:[["yes","Yes"],["no","No"]]},
+  {k:"faithful", t:"Faithful transformation (1–4)", h:"Tests the same skill/knowledge at comparable difficulty. 1 = unrelated/much easier or harder, 4 = same competency & difficulty.",
+   opts:[["1","1"],["2","2"],["3","3"],["4","4"]]},
+  {k:"answer_correct", t:"Reference answer correct for the mutated item?", h:"The shown expected answer is actually right for the mutated problem.",
+   opts:[["yes","Yes"],["no","No"],["unsure","Unsure"]]},
+  {k:"tests_ok", t:"Updated tests valid & consistent? (code only)", h:"Assertions are well-formed and match the reference solution.",
+   opts:[["yes","Yes"],["no","No"],["na","N/A"]], codeOnly:true},
+  {k:"no_leak", t:"No answer leak / hint in the prompt?", h:"The mutated input does not state or strongly hint the answer (passage-grounded RC excepted).",
+   opts:[["yes","Yes"],["no","No"]]},
+  {k:"transformed_enough", t:"Sufficiently transformed (1–4)", h:"A model that memorised the original would NOT recognise this. 1 = near-identical, 4 = thoroughly rewritten.",
+   opts:[["1","1"],["2","2"],["3","3"],["4","4"]]},
+  {k:"fluent", t:"Fluent & natural?", h:"Reads like a human-written problem, no garbled text.",
+   opts:[["yes","Yes"],["no","No"]]},
+  {k:"verdict", t:"Overall verdict", h:"Accept = usable as a mutated benchmark item. Reject = should be discarded.",
+   opts:[["accept","Accept"],["reject","Reject"]], cls:true},
+];
+const REQUIRED = RUBRIC.filter(q=>!q.codeOnly).map(q=>q.k);
+
+const $ = (s,el=document)=>el.querySelector(s);
+const el = (t,props={},...kids)=>{const e=document.createElement(t);Object.assign(e,props);
+  for(const k of kids) e.append(k); return e;};
+
+let POOL=[], KEYSET=[], ANNOT=null, STORE={}, idx=0;
+
+function storeKey(){ return "abv4_annot_"+ANNOT; }
+function load(){ try{ STORE = JSON.parse(localStorage.getItem(storeKey())||"{}"); }catch{ STORE={}; } }
+function save(){ try{ localStorage.setItem(storeKey(), JSON.stringify(STORE)); }catch{} }
+function rec(id){ return STORE[id] || (STORE[id]={}); }
+function isDone(id){ const r=STORE[id]||{}; return REQUIRED.every(k=>r[k]!=null && r[k]!==""); }
+function doneCount(){ return KEYSET.filter(isDone).length; }
+
+async function boot(){
+  const params = new URLSearchParams(location.search);
+  let assignments={};
+  try{
+    const [p,a] = await Promise.all([
+      fetch("pool.json").then(r=>r.json()),
+      fetch("assignments.json").then(r=>r.json()).catch(()=>({})),
+    ]);
+    POOL = p; assignments = a;
+  }catch(e){ $("#app").innerHTML = "<main><p>Could not load <code>pool.json</code>. "
+      +"Serve this folder over http (GitHub Pages or <code>python -m http.server</code>).</p></main>"; return; }
+
+  const want = params.get("annotator");
+  const names = Object.keys(assignments);
+  if(!want || (names.length && !names.includes(want))){
+    renderSetup(names); return;
+  }
+  ANNOT = want;
+  const allow = assignments[ANNOT];
+  const byId = Object.fromEntries(POOL.map(it=>[it.id,it]));
+  KEYSET = (allow && allow.length ? allow : POOL.map(it=>it.id)).filter(id=>byId[id]);
+  POOL = KEYSET.map(id=>byId[id]);
+  load();
+  idx = Math.max(0, KEYSET.findIndex(id=>!isDone(id)));
+  if(idx<0) idx=0;
+  renderApp();
+  addEventListener("keydown", onKey);
+}
+
+function renderSetup(names){
+  const wrap = el("div",{className:"setup"});
+  wrap.append(el("h1",{textContent:"Mutation annotation"}));
+  if(names.length){
+    wrap.append(el("p",{textContent:"Open your assigned link:"}));
+    names.forEach(n=> wrap.append(el("a",{href:"?annotator="+encodeURIComponent(n),textContent:"?annotator="+n})));
+  }else{
+    wrap.append(el("p",{textContent:"No assignments.json found — append ?annotator=yourname to the URL."}));
+  }
+  $("#app").replaceChildren(wrap);
+}
+
+function renderApp(){
+  const app = $("#app"); app.replaceChildren();
+
+  const head = el("header");
+  head.append(el("span",{className:"who",textContent:ANNOT}));
+  const bar = el("div",{className:"bar"}); const fill=el("i"); bar.append(fill);
+  const count = el("span",{className:"count"});
+  head.append(bar,count);
+  const exp = el("button",{className:"primary",textContent:"Export ⬇",onclick:exportJSON});
+  head.append(exp);
+  app.append(head);
+
+  const main = el("main");
+  const host = el("div",{id:"card"});
+  main.append(host);
+  app.append(main);
+
+  window._refresh = ()=>{
+    const total=KEYSET.length, done=doneCount();
+    fill.style.width = (100*done/total).toFixed(1)+"%";
+    count.textContent = `item ${idx+1} / ${total} · ${done} done`;
+    renderCard(host);
+  };
+  _refresh();
+}
+
+function renderCard(host){
+  const it = POOL[idx]; const r = rec(it.id);
+  const c = el("div");
+
+  const badges = el("div",{className:"badges"});
+  badges.append(el("span",{className:"tag",textContent:it.benchmark}));
+  badges.append(el("span",{className:"tag",textContent:it.kind}));
+  (it.triage_flags||[]).forEach(f=> badges.append(el("span",{className:"tag flag",textContent:"⚑ "+f})));
+  c.append(badges);
+
+  const cols = el("div",{className:"cols"});
+
+  const left = el("div",{className:"panel"});
+  left.append(el("h3",{textContent:"Original"}));
+  left.append(el("div",{className:"lbl",textContent:"Input"}));
+  left.append(el("pre",{className:"txt",textContent:it.original_input||"—"}));
+  left.append(el("div",{className:"lbl",textContent:it.kind==="code"?"Reference solution":"Reference answer"}));
+  left.append(el("pre",{className:"txt",textContent:String(it.original_output??"—")}));
+  if(it.original_tests){
+    const d=el("details"); d.append(el("summary",{textContent:"original tests"}));
+    d.append(el("pre",{className:"txt",textContent:fmtTests(it.original_tests)})); left.append(d);
+  }
+  cols.append(left);
+
+  const right = el("div",{className:"panel"});
+  right.append(el("h3",{textContent:"Mutated"}));
+  right.append(el("div",{className:"lbl",textContent:"Input"}));
+  right.append(el("pre",{className:"txt",textContent:it.modified_input||"(empty)"}));
+  right.append(el("div",{className:"lbl",textContent:it.kind==="code"?"Reference solution (updated)":"Expected answer (updated)"}));
+  right.append(el("pre",{className:"txt",textContent:String(it.expected_answer??"—")}));
+  if(it.updated_tests){
+    const d=el("details"); d.append(el("summary",{textContent:"updated tests"}));
+    d.append(el("pre",{className:"txt",textContent:fmtTests(it.updated_tests)})); right.append(d);
+  }
+  const rd=el("details"); rd.append(el("summary",{textContent:"transformation rule"}));
+  rd.append(el("pre",{className:"txt",textContent:
+    `${it.rule_name}\n\n${it.rule_description||""}\n\n${it.output_change_description||""}`.trim()}));
+  right.append(rd);
+  cols.append(right);
+  c.append(cols);
+
+  // rubric
+  const rub = el("div",{className:"rubric"});
+  RUBRIC.forEach(q=>{
+    if(q.codeOnly && it.kind!=="code") return;
+    const box = el("div",{className:"q"});
+    box.append(el("div",{className:"qt"},q.t,
+      q.h ? el("span",{className:"qh",textContent:" — "+q.h}) : ""));
+    const opts = el("div",{className:"opts"});
+    q.opts.forEach(([v,txt])=>{
+      const lab = el("label");
+      if(q.cls && v==="accept") lab.className="accept";
+      if(q.cls && v==="reject") lab.className="reject";
+      const inp = el("input",{type:"radio",name:q.k+"_"+it.id,value:v});
+      inp.checked = r[q.k]===v;
+      inp.onchange = ()=>{ rec(it.id)[q.k]=v; rec(it.id).ts=Date.now(); save(); _refresh(); };
+      lab.append(inp, el("span",{textContent:txt}));
+      opts.append(lab);
+    });
+    box.append(opts);
+    rub.append(box);
+  });
+  const nt = el("div",{className:"q"});
+  nt.append(el("div",{className:"qt",textContent:"Notes (why reject / what's wrong)"}));
+  const ta = el("textarea",{value:r.notes||"", placeholder:"optional free text"});
+  ta.oninput = ()=>{ rec(it.id).notes = ta.value; save(); };
+  nt.append(ta);
+  rub.append(nt);
+  c.append(rub);
+
+  // nav
+  const nav = el("nav");
+  nav.append(el("button",{textContent:"← Prev",onclick:()=>go(idx-1)}));
+  nav.append(el("button",{textContent:"Next →",onclick:()=>go(idx+1)}));
+  const jump = el("input",{className:"jump",type:"number",min:1,max:KEYSET.length,value:idx+1});
+  jump.onchange = ()=> go(parseInt(jump.value,10)-1);
+  nav.append(jump);
+  nav.append(el("span",{className:"done-dot"+(isDone(it.id)?" on":"")}));
+  nav.append(el("span",{className:"spacer"}));
+  const nextUndone = el("button",{textContent:"Next unanswered ⇢",onclick:()=>{
+    const n = KEYSET.findIndex((id,i)=> i>idx && !isDone(id));
+    go(n>=0?n:KEYSET.findIndex(id=>!isDone(id)));
+  }});
+  nav.append(nextUndone);
+  c.append(nav);
+  c.append(el("div",{className:"hint",textContent:
+    "Keys: ←/→ move · 1–4 or Y/N/U pick the focused row · auto-saved locally. Export when done and send the file."}));
+
+  host.replaceChildren(c);
+}
+
+function fmtTests(t){ return Array.isArray(t) ? t.join("\n") : String(t); }
+function go(i){ idx = Math.max(0, Math.min(KEYSET.length-1, i)); _refresh(); scrollTo(0,0); }
+
+function onKey(e){
+  if(/INPUT|TEXTAREA/.test(document.activeElement.tagName) && document.activeElement.type!=="radio") return;
+  if(e.key==="ArrowLeft") return go(idx-1);
+  if(e.key==="ArrowRight") return go(idx+1);
+  const it = POOL[idx];
+  const map = {y:"yes",n:"no",u:"unsure",a:"accept",r:"reject"};
+  let val = map[e.key.toLowerCase()] ?? (/^[1-4]$/.test(e.key) ? e.key : null);
+  if(val==null) return;
+  // apply to the first rubric row that offers this value and is still unanswered
+  for(const q of RUBRIC){
+    if(q.codeOnly && it.kind!=="code") continue;
+    if(q.opts.some(([v])=>v===val) && rec(it.id)[q.k]==null){
+      rec(it.id)[q.k]=val; rec(it.id).ts=Date.now(); save(); _refresh(); return;
+    }
+  }
+}
+
+function exportJSON(){
+  const items={};
+  for(const id of KEYSET){ if(STORE[id]) items[id]=STORE[id]; }
+  const blob = new Blob([JSON.stringify({
+    annotator:ANNOT, generated_at:new Date().toISOString(),
+    n_assigned:KEYSET.length, n_done:doneCount(), items,
+  },null,1)],{type:"application/json"});
+  const a=el("a",{href:URL.createObjectURL(blob),download:`annotations_${ANNOT}.json`});
+  document.body.append(a); a.click(); a.remove();
+}
+
+boot();
+</script>
+</body>
+</html>

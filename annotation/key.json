@@ -1,0 +1,2402 @@
+{
+ "9e368268b114": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 163,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "ede83049349f": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 28,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "dc5e74c204da": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 6,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "07c782fdc834": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 189,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "083407f290e0": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 70,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "4d85fcd58c07": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 62,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "9e0454fab747": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 57,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "9055e04ae61e": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 35,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "b7c2e75b2003": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 188,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "d8ff4693b0c0": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 26,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "1ce2b1f194f1": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 173,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "1337fa325dbb": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 139,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "8f72274f4171": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 22,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "bd06e30021c4": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 151,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "b1d8ebd127a3": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 108,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "92d374455ab5": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 8,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "7b12ccce2b88": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 7,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "5e4009c6c968": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 23,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "a28ba39ac603": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 55,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "09adfca24e1f": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 59,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "aac8c1876d0e": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 129,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "b47b32297a04": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 154,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "d02a02868aa4": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 196,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "34ca7db8e8b1": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 143,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "40eb9fd1de6d": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 50,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "4d8888b223b5": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 166,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "6b00cb72b78f": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 187,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "e1f9bde04df3": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 107,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "4e7a10af507a": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 56,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "285f4ca72a9b": {
+  "model": "deepseek",
+  "benchmark": "GSM8K",
+  "run_id": 1,
+  "index": 114,
+  "file": "data/version_4/deepseek/GSM8K_deepseek_deepseek-v3.2_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "3cd447390dad": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 150,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "4bdf644b63a4": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 71,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "d130954db264": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 1,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "ed307b3858c2": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 40,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "07f969cc7bf1": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 108,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "32dea5d29b39": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 87,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "500d99175ca8": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 152,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "b88e71e15d23": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 39,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "7950f96b95aa": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 55,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "f373121950a6": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 86,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "93aa0a70d81f": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 26,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "070c45dae31b": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 23,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "daff79dc3805": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 97,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "77a28f74ddcc": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 24,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "e695f26e65f9": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 91,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "93362bf2f365": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 88,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "54d1aa4712fc": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 67,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "8e16d5f567da": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 11,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "a2d6369be703": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 117,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "fe4bdce20d8c": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 31,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "db9b43905051": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 96,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "55a95523367b": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 20,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "e07cca6ba7be": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 75,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "8069900c4890": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 92,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "0d1e604c398c": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 49,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "a49d95221ffc": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 17,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "0bc4048a5c2a": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 136,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "3c51bc62c526": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 84,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "0e417d3a4560": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 29,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "66d6fb05df56": {
+  "model": "deepseek",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 4,
+  "index": 98,
+  "file": "data/version_4/deepseek/OpenAI_HumanEval_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "b6994e1a16fe": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 74,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "49860e250114": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 20,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "19d7afb0ce01": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 59,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "4c0a998fd996": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 25,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "dcacda02aa6e": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 97,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "e0bc9894ea2b": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 71,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "b7d4c0ba8422": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 116,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "4f2ff53a446d": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 162,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "710f8fd91060": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 93,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "64d126f2fcf7": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 41,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "817996518b06": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 94,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "50ba2b3f6090": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 90,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "c69f69239094": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 53,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "fbcb19b82ff1": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 171,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "d223717a3765": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 68,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "22d2cae5ab44": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 179,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "b232564e6989": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 174,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "e37d8b693973": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 165,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "2702ff3b9329": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 18,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "accb3e9851b1": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 155,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "1deca2486384": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 192,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "e5330cdf5ecc": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 43,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "abb204f4d784": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 136,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "2c6ccee5cf6c": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 62,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "f5fd9b34c096": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 190,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "32249255be20": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 118,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "78a8d77b792d": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 195,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "2da97d9acaf6": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 69,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "f4a3527b158d": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 163,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "00932a5504d3": {
+  "model": "deepseek",
+  "benchmark": "MBPP",
+  "run_id": 4,
+  "index": 142,
+  "file": "data/version_4/deepseek/MBPP_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "76778ab48a99": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 224,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "05a1b7220fdf": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 701,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "d216f3213b84": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 332,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "f92219978d5b": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 786,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "7e66d49f5194": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 794,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "273df2eac4de": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 57,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "1b9ac729e94e": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 234,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "c128a431a29b": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 32,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "ba9854adb99a": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 323,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "790037fe3332": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 410,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "ff8ac815f50b": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 274,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "7c8c5caae6ef": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 67,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "fb0ba73658ed": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 216,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "62bb2381ded7": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 580,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "829e070c7212": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 735,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "92533cd7c482": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 322,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "21a974accd7d": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 217,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "6abbe8e09ce7": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 671,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "97b04b0a2f15": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 511,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "4ff8f7ba2794": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 405,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "2d1db54d5dcc": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 658,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "68f57fbd275a": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 469,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "4e1c391eb017": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 146,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "6fb7949f5d2f": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 271,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "2c09f8ba666c": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 142,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "e02d77a5af45": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 252,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "ead02cefe07d": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 762,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "f9bf181d4532": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 574,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "081a234515ab": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 551,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "1d9745bf93f8": {
+  "model": "deepseek",
+  "benchmark": "TruthfulQA",
+  "run_id": 2,
+  "index": 269,
+  "file": "data/version_4/deepseek/TruthfulQA_deepseek_deepseek-v3.2_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "99bbb52bceb0": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 382,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "af5d28f97151": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 299,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "d11ced94c606": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 219,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "fd80d30f0228": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 298,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "4be9c04bf5dd": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 204,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "c7c5025fa843": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 185,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "20ddabe802ee": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 112,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "1297fc9ac680": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 70,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "4e61f06f1375": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 260,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "6e198e4d04b8": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 252,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "b1c11c949c6b": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 46,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "440c3e3dba40": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 386,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "fa879e427e34": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 24,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "ba83aa09cddc": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 56,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "94a2dc9f46fb": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 78,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "dcd773d875eb": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 321,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "f933b27c0214": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 81,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "c1f66ea7755a": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 348,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "29d2b81ee9f9": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 216,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "97b3e64d691e": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 305,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "18bc6d513b6f": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 32,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "2f1fa20744a6": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 197,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "b9584e8d57f7": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 195,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "3f65c8ddab84": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 239,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "5513bf1c355a": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 270,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "ba59ca1a3e75": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 128,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "cb85dce342e4": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 283,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "56cacf510b5e": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 5,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "37b2960ce1f8": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 369,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "1570da6c13be": {
+  "model": "deepseek",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 4,
+  "index": 58,
+  "file": "data/version_4/deepseek/LatestEval_BBC-latest_deepseek_deepseek-v3.2_FULL_BENCHMARK_4.json",
+  "checker_verdict": "pass"
+ },
+ "0f5f6bd94b50": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 68,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "74386f85bccc": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 87,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "fc6bef026476": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 28,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "575be98f9bcd": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 75,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "3b5bcb46e14d": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 111,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "20acdf398f98": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 20,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "121e74506a32": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 58,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "5b9792b9b074": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 0,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "35e2a699160e": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 122,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "34b8ee1ef422": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 92,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "37d854fad3e2": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 112,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "a0bd8aca9fd3": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 123,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "b1afd2aa3bcf": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 33,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "dabde2a081fd": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 64,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "a67f1eed9329": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 97,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "dbf8072bb497": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 22,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "d3b80c292bda": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 118,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "a7573788bfe7": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 13,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "aef4ee2fd892": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 127,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "37e09d4d5b47": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 80,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "f3e2a4fdf0ac": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 38,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "458b3d17303b": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 107,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "6508a964a62c": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 81,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "b3e8db838fc1": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 115,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "abd576bcc9f1": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 77,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "95449a38a180": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 25,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "e270a9640c06": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 19,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "775f83db306d": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 47,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "ed92dd421832": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 117,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "89235cd56ec8": {
+  "model": "mistral",
+  "benchmark": "GSM8K",
+  "run_id": 3,
+  "index": 126,
+  "file": "data/version_4/mistral/GSM8K_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "0d5d0942419a": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 70,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "2051d38874f8": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 104,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "55197e6cb30f": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 68,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "cbee80dee4f3": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 0,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "a3d111d58d46": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 77,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "5e8670b4efdd": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 42,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "92f07a5512d5": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 63,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "c3c9423919f7": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 2,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "60698a909108": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 14,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "385f218f25a0": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 47,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "6dd6b82cce2c": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 40,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "c6c008636d01": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 30,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "0983984a8ea1": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 7,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "3038ce43b1b2": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 97,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "01d0cca5337b": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 73,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "5230e108d30a": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 10,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "edd438756b70": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 92,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "f6819aa4c191": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 103,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "4e3e38a5a7cf": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 8,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "acf9de80afce": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 69,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "ae0f6527bc1b": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 16,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "e38e7973c589": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 86,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "2b156737a255": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 61,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "fa26d44e93c0": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 71,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "228a804185fb": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 21,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "349d6d8dc321": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 33,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "84bc82706420": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 107,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "94f7c3c8be2a": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 78,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "c70de0cc7be5": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 55,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "fb6d5bc0583b": {
+  "model": "mistral",
+  "benchmark": "OpenAI HumanEval",
+  "run_id": 2,
+  "index": 27,
+  "file": "data/version_4/mistral/OpenAI_HumanEval_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_2.json",
+  "checker_verdict": "pass"
+ },
+ "8d54bc684362": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 138,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "1a7f67ead347": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 193,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "7102d7a7d520": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 186,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "bd570c3b217b": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 176,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "31e08525b13a": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 51,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "9bae6552567f": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 182,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "189bd041deac": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 79,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "ae496b327a99": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 102,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "2a58981d3b8f": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 171,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "33aaabe352a6": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 166,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "b46f029786a8": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 95,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "734f47e3388e": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 112,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "4b68ebeb371b": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 132,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "88b0b3306aee": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 115,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "9cee9e017df0": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 30,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "d0c455d22c07": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 63,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "144f0d0e3c0e": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 57,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "e555084b0ddd": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 16,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "dfa763efd449": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 86,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "1cbdb6f66d89": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 5,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "23555b0d03c8": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 150,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "11ba3543be15": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 141,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "99839df79056": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 58,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "6bbc2bade7e7": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 178,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "01b42d7d8b61": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 56,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "55a8671171b4": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 1,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "dc6b9445a5a7": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 18,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "3c5ed49f8485": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 161,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "9a6767d00a21": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 15,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "91a8ae8a9348": {
+  "model": "mistral",
+  "benchmark": "MBPP",
+  "run_id": 3,
+  "index": 195,
+  "file": "data/version_4/mistral/MBPP_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "3c6172592860": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 69,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "649326ccf747": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 32,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "1b0d076efce8": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 338,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "fdf06a697e93": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 72,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "e93e15fa6275": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 526,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "4975c59b3f03": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 243,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "1ceae59360dd": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 285,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "fb1193727df1": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 685,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "2c62dbec595f": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 497,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "5ee17408b81a": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 219,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "2c1414bbacf8": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 552,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "ac9438bd5898": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 135,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "cf525f70eb93": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 740,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "8a2e2dbf751e": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 584,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "a7cfb01b7fd3": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 590,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "92c129119f89": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 484,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "4b5fe41bf8d6": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 248,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "22bd02bbfb73": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 803,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "1d1ec8d6becf": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 416,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "fe4569530d0b": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 194,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "3a773ca60b3f": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 96,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "9316f08062c3": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 99,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "b8fd539b5bfd": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 674,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "a0301034c8b8": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 441,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "586b0601b3c8": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 362,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "402ea498d087": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 433,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "d77ecee0bd94": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 420,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "d1cdd6068566": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 478,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "d34a9767421f": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 746,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "fa897e93382d": {
+  "model": "mistral",
+  "benchmark": "TruthfulQA",
+  "run_id": 1,
+  "index": 55,
+  "file": "data/version_4/mistral/TruthfulQA_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_1.json",
+  "checker_verdict": "pass"
+ },
+ "1b27d115d49e": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 344,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "b4f1dd2f9e2d": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 334,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "f640e62579a9": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 330,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "cb16ff1188aa": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 50,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "e5970f15c4e9": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 31,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "b18468b26049": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 206,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "d5adf9cd7b52": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 372,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "0f7bdc39cac8": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 173,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "1d53f62f27f8": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 55,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "0e244fb21ce7": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 127,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "e7caa4cbaa74": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 98,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "9fb706139687": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 97,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "c0d1be7dcff8": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 274,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "4595e7962bf2": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 229,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "33e26c9747a7": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 71,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "6c37b3d9b860": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 216,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "3eab5727a549": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 93,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "1e540a8db264": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 142,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "01dee9fd499d": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 236,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "d1f501f72cf9": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 38,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "c5cb48cbc68d": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 226,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "2c242fe42a41": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 281,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "9ae69d12b68f": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 25,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "f506f17f5171": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 333,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "3743384ea464": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 276,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "6338f1bc75a8": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 7,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "dfc2d02ef838": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 47,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "8fa657647f67": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 385,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "e20935e4585c": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 121,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ },
+ "fa2facdcaa41": {
+  "model": "mistral",
+  "benchmark": "LatestEval BBC-latest",
+  "run_id": 3,
+  "index": 85,
+  "file": "data/version_4/mistral/LatestEval_BBC-latest_mistralai_mistral-small-24b-instruct-2501_FULL_BENCHMARK_3.json",
+  "checker_verdict": "pass"
+ }
+}

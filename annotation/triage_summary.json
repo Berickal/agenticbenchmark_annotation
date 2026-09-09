@@ -1,0 +1,179 @@
+{
+  "deepseek": {
+    "GSM8K": {
+      "1": {
+        "total": 199,
+        "clean": 199
+      },
+      "2": {
+        "total": 186,
+        "clean": 186
+      },
+      "3": {
+        "total": 191,
+        "clean": 191
+      }
+    },
+    "LatestEval BBC-latest": {
+      "2": {
+        "total": 402,
+        "clean": 393,
+        "near_verbatim": 9
+      },
+      "3": {
+        "total": 402,
+        "clean": 384,
+        "near_verbatim": 18
+      },
+      "4": {
+        "total": 402,
+        "clean": 397,
+        "near_verbatim": 5
+      }
+    },
+    "MBPP": {
+      "3": {
+        "total": 198,
+        "clean": 198
+      },
+      "4": {
+        "total": 200,
+        "clean": 200
+      }
+    },
+    "OpenAI HumanEval": {
+      "4": {
+        "total": 154,
+        "clean": 153,
+        "near_verbatim": 1
+      },
+      "5": {
+        "total": 143,
+        "clean": 143
+      },
+      "6": {
+        "total": 145,
+        "clean": 145
+      }
+    },
+    "TruthfulQA": {
+      "2": {
+        "total": 817,
+        "clean": 760,
+        "fuzzy_leak": 40,
+        "answer_leak": 16,
+        "near_verbatim": 1
+      },
+      "3": {
+        "total": 817,
+        "clean": 744,
+        "fuzzy_leak": 55,
+        "near_verbatim": 11,
+        "answer_leak": 7
+      },
+      "4": {
+        "total": 817,
+        "clean": 749,
+        "fuzzy_leak": 64,
+        "near_verbatim": 1,
+        "answer_leak": 3
+      }
+    }
+  },
+  "mistral": {
+    "GSM8K": {
+      "1": {
+        "total": 103,
+        "clean": 102,
+        "near_verbatim": 1
+      },
+      "2": {
+        "total": 130,
+        "clean": 130
+      },
+      "3": {
+        "total": 132,
+        "clean": 131,
+        "near_verbatim": 1
+      }
+    },
+    "LatestEval BBC-latest": {
+      "1": {
+        "total": 402,
+        "clean": 389,
+        "near_verbatim": 13
+      },
+      "2": {
+        "total": 402,
+        "clean": 387,
+        "near_verbatim": 15
+      },
+      "3": {
+        "total": 402,
+        "clean": 395,
+        "near_verbatim": 7
+      }
+    },
+    "MBPP": {
+      "1": {
+        "total": 194,
+        "clean": 192,
+        "near_verbatim": 1,
+        "hard_fail": 1,
+        "blank_input": 1
+      },
+      "2": {
+        "total": 200,
+        "clean": 197,
+        "near_verbatim": 3
+      },
+      "3": {
+        "total": 199,
+        "clean": 199
+      }
+    },
+    "OpenAI HumanEval": {
+      "1": {
+        "total": 128,
+        "hard_fail": 76,
+        "blank_input": 76,
+        "clean": 52
+      },
+      "2": {
+        "total": 111,
+        "clean": 105,
+        "hard_fail": 6,
+        "blank_input": 6
+      },
+      "3": {
+        "total": 99,
+        "clean": 92,
+        "hard_fail": 7,
+        "blank_input": 7
+      }
+    },
+    "TruthfulQA": {
+      "1": {
+        "total": 817,
+        "clean": 762,
+        "near_verbatim": 3,
+        "fuzzy_leak": 48,
+        "answer_leak": 4
+      },
+      "2": {
+        "total": 817,
+        "clean": 760,
+        "fuzzy_leak": 42,
+        "answer_leak": 7,
+        "near_verbatim": 8
+      },
+      "3": {
+        "total": 817,
+        "clean": 742,
+        "near_verbatim": 14,
+        "answer_leak": 10,
+        "fuzzy_leak": 52
+      }
+    }
+  }
+}
