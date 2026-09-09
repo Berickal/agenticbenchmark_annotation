@@ -77,10 +77,6 @@ const RUBRIC = [
    opts:[["yes","Yes"],["no","No"],["na","N/A"]], codeOnly:true},
   {k:"no_leak", t:"No answer leak / hint in the prompt?", h:"The mutated input does not state or strongly hint the answer (passage-grounded RC excepted).",
    opts:[["yes","Yes"],["no","No"]]},
-  {k:"transformed_enough", t:"Sufficiently transformed (1–4)", h:"A model that memorised the original would NOT recognise this. 1 = near-identical, 4 = thoroughly rewritten.",
-   opts:[["1","1"],["2","2"],["3","3"],["4","4"]]},
-  {k:"fluent", t:"Fluent & natural?", h:"Reads like a human-written problem, no garbled text.",
-   opts:[["yes","Yes"],["no","No"]]},
   {k:"verdict", t:"Overall verdict", h:"Accept = usable as a mutated benchmark item. Reject = should be discarded.",
    opts:[["accept","Accept"],["reject","Reject"]], cls:true},
 ];
@@ -213,7 +209,7 @@ function renderCard(host){
     if(q.codeOnly && it.kind!=="code") return;
     const box = el("div",{className:"q"});
     box.append(el("div",{className:"qt"},q.t,
-      q.h ? el("span",{className:"qh",textContent:" — "+q.h}) : ""));
+      q.h ? el("span",{className:"qh",textContent:" "+q.h}) : ""));
     const opts = el("div",{className:"opts"});
     q.opts.forEach(([v,txt])=>{
       const lab = el("label");

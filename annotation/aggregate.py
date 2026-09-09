@@ -8,7 +8,7 @@ annotation/key.json (unblinding) and annotation/triage_summary.json.
 
 Reports, per (mutation model x benchmark):
   * acceptance rate (per-item majority verdict) + Wilson 95% CI
-  * mean faithfulness / transformed-enough (1-4)
+  * mean faithfulness (1-4)
   * % well-formed, % answer-correct, % no-leak
   * triage hard-fail rate (auto-rejects that never reached annotators)
 Plus inter-annotator agreement (Cohen's kappa) on the overlap subset.
@@ -105,7 +105,7 @@ def main(argv=None) -> int:
         per_cell_ids[(k["model"], k["benchmark"])].append(iid)
 
     for (model, bench), ids in sorted(per_cell_ids.items()):
-        item_verdicts, faith, transf, wf, ac, nl = [], [], [], [], [], []
+        item_verdicts, faith, wf, ac, nl = [], [], [], [], []
         for iid in ids:
             recs = list(labels.get(iid, {}).values())
             if not recs:
@@ -115,7 +115,6 @@ def main(argv=None) -> int:
                 item_verdicts.append(mv)
             for r in recs:
                 faith.append(r.get("faithful"))
-                transf.append(r.get("transformed_enough"))
                 wf.append(r.get("wellformed"))
                 ac.append(r.get("answer_correct"))
                 nl.append(r.get("no_leak"))
@@ -131,7 +130,6 @@ def main(argv=None) -> int:
             "acceptance_rate": round(p, 3) if n else None,
             "ci95": [round(lo, 3), round(hi, 3)] if n else None,
             "mean_faithful": _mean(faith),
-            "mean_transformed_enough": _mean(transf),
             "pct_wellformed": _pct(wf),
             "pct_answer_correct": _pct(ac, among={"yes", "no"}),
             "pct_no_leak": _pct(nl),
@@ -183,12 +181,12 @@ def main(argv=None) -> int:
 
     # ── console ──
     print(f"annotators: {sorted(annotators)}   items with >=1 label: {len(labels)}")
-    print(f"\n{'model / benchmark':38s} {'n':>4} {'accept':>7} {'95% CI':>15} {'faith':>6} {'xform':>6} {'wf%':>5} {'ans%':>5} {'leak-ok%':>8} {'hardfail%':>9}")
+    print(f"\n{'model / benchmark':38s} {'n':>4} {'accept':>7} {'95% CI':>15} {'faith':>6} {'wf%':>5} {'ans%':>5} {'leak-ok%':>8} {'hardfail%':>9}")
     for (m, b), c in sorted(cells.items()):
         ci = f"[{c['ci95'][0]:.2f},{c['ci95'][1]:.2f}]" if c["ci95"] else "—"
         print(f"{m + ' / ' + b:38s} {c['n_items_labeled']:>4} "
               f"{('%.0f%%'%(100*c['acceptance_rate'])) if c['acceptance_rate'] is not None else '—':>7} {ci:>15} "
-              f"{str(c['mean_faithful']):>6} {str(c['mean_transformed_enough']):>6} "
+              f"{str(c['mean_faithful']):>6} "
               f"{str(c['pct_wellformed']):>5} {str(c['pct_answer_correct']):>5} "
               f"{str(c['pct_no_leak']):>8} {str(c['triage_hard_fail_pct']):>9}")
     print(f"\nagreement: {agreement}")

@@ -65,7 +65,7 @@ python annotation/aggregate.py annotation/annotations/*.json
 ```
 
 Per cell: acceptance rate (per-item majority verdict) + Wilson 95% CI, mean
-faithfulness / transformed-enough, % well-formed / answer-correct / no-leak,
+faithfulness, % well-formed / answer-correct / no-leak,
 and the triage hard-fail rate of the sampled run. Plus Cohen's κ and pairwise
 agreement on the overlap subset, and every reject with its note. Full JSON in
 `annotation/results.json`.
@@ -79,8 +79,6 @@ agreement on the overlap subset, and every reject with its note. Full JSON in
 | `answer_correct` | yes/no/unsure | shown expected answer is right for the mutated item |
 | `tests_ok` | yes/no/na | (code) updated assertions valid & consistent |
 | `no_leak` | yes/no | prompt doesn't state/hint the answer (passage-grounded RC excepted) |
-| `transformed_enough` | 1–4 | a model that memorised the original wouldn't recognise it |
-| `fluent` | yes/no | reads like a human-written problem |
 | `verdict` | accept/reject | usable as a mutated benchmark item |
 
 ## Notes
