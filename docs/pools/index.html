@@ -256,7 +256,7 @@ function guidelines(){
   g.addEventListener("toggle",()=>{ if(!g.open) localStorage.setItem("abv4_guide_seen","1"); });
   g.append(el("summary",{},
     el("span",{className:"chev",textContent:"▸"}),
-    "Task & guidelines — read once, then collapse"));
+    "Task & guidelines"));
   const b = el("div",{className:"body"});
   b.innerHTML = `
   <h4>What this is</h4>
@@ -297,7 +297,7 @@ function guidelines(){
   <div class="callout"><b>Reading-comprehension items (BBC):</b> the answer is meant to be
   recoverable from the passage. That is not an “answer leak”. A leak is when the question or
   passage <i>states</i> the answer so directly that no reasoning is needed.</div>
-  
+
   <h4>Rubric</h4>
   <dl class="glossary">
     <dt>Well-formed &amp; solvable</dt><dd>Coherent, complete, answerable as written. Empty or garbled input → No.</dd>
