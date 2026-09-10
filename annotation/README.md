@@ -81,6 +81,41 @@ agreement on the overlap subset, and every reject with its note. Full JSON in
 | `no_leak` | yes/no | prompt doesn't state/hint the answer (passage-grounded RC excepted) |
 | `verdict` | accept/reject | usable as a mutated benchmark item |
 
+## Pool mode (`docs/pools/`) — recommended for a wide, self-recruited pool
+
+Instead of per-annotator shards, cut **N disjoint pools** of ~30 stratified items.
+Each new annotator opens one link, types their name, and is randomly routed to a
+pool; everyone in a pool labels the same items. A few **anchor** items appear in
+every pool (cross-pool calibration) and a few **gold** items (known rejects —
+blank inputs) act as an attention check.
+
+```bash
+python annotation/triage.py --shared-only
+python annotation/sample_pools.py --pools 3 --per-pool 30 --anchors 5 --gold 3 --seed 42
+#   -> docs/pools/pools.json  +  annotation/pools_key.json / pools_gold.json / pools_manifest.json
+```
+
+Deploy `docs/pools/` (same Pages setup). Share **one** link:
+
+```
+https://<user>.github.io/<repo>/pools/
+```
+
+`?pool=A` force-assigns a pool (use it to rebalance a lopsided coin-flip run);
+`?annotator=<name>` skips the name prompt. Each export is
+`annotations_<name>_<pool>.json`.
+
+```bash
+python annotation/aggregate_pools.py annotation/pool_annotations/*.json
+#   overall + per-family + per-pool acceptance & CI, Fleiss κ,
+#   cross-pool anchor agreement, gold QC.  Add --drop-failed-gold to exclude
+#   raters who accepted a known-reject.
+```
+
+Coverage: `pools × per-pool` unique items (e.g. 3×30 = 90). Pooled acceptance CI
+≈ ±10 pp; per task-family directional; **per-benchmark is not resolvable** at
+this size — use the shard mode above (~300 items) if you need that.
+
 ## Notes
 
 - The two mutation models don't cover the same benchmark set — `OpenCodeInstruct`
