@@ -8,7 +8,7 @@ annotation/key.json (unblinding) and annotation/triage_summary.json.
 
 Reports, per (mutation model x benchmark):
   * acceptance rate (per-item majority verdict) + Wilson 95% CI
-  * mean faithfulness (1-4)
+  * % same-difficulty, mean difficulty shift (− easier / + harder)
   * % well-formed, % answer-correct, % no-leak
   * triage hard-fail rate (auto-rejects that never reached annotators)
 Plus inter-annotator agreement (Cohen's kappa) on the overlap subset.
@@ -105,7 +105,7 @@ def main(argv=None) -> int:
         per_cell_ids[(k["model"], k["benchmark"])].append(iid)
 
     for (model, bench), ids in sorted(per_cell_ids.items()):
-        item_verdicts, faith, wf, ac, nl = [], [], [], [], []
+        item_verdicts, wf, ac, nl, diff = [], [], [], [], []
         for iid in ids:
             recs = list(labels.get(iid, {}).values())
             if not recs:
@@ -114,10 +114,11 @@ def main(argv=None) -> int:
             if mv:
                 item_verdicts.append(mv)
             for r in recs:
-                faith.append(r.get("faithful"))
                 wf.append(r.get("wellformed"))
                 ac.append(r.get("answer_correct"))
                 nl.append(r.get("no_leak"))
+                if str(r.get("difficulty", "")).isdigit():
+                    diff.append(int(r["difficulty"]))
         n = len(item_verdicts)
         acc = sum(v == "accept" for v in item_verdicts)
         p, lo, hi = wilson(acc, n)
@@ -129,7 +130,8 @@ def main(argv=None) -> int:
             "n_items_labeled": n,
             "acceptance_rate": round(p, 3) if n else None,
             "ci95": [round(lo, 3), round(hi, 3)] if n else None,
-            "mean_faithful": _mean(faith),
+            "pct_same_difficulty": round(100 * diff.count(3) / len(diff), 1) if diff else None,
+            "mean_difficulty_shift": round(sum(d - 3 for d in diff) / len(diff), 2) if diff else None,
             "pct_wellformed": _pct(wf),
             "pct_answer_correct": _pct(ac, among={"yes", "no"}),
             "pct_no_leak": _pct(nl),
@@ -181,12 +183,12 @@ def main(argv=None) -> int:
 
     # ── console ──
     print(f"annotators: {sorted(annotators)}   items with >=1 label: {len(labels)}")
-    print(f"\n{'model / benchmark':38s} {'n':>4} {'accept':>7} {'95% CI':>15} {'faith':>6} {'wf%':>5} {'ans%':>5} {'leak-ok%':>8} {'hardfail%':>9}")
+    print(f"\n{'model / benchmark':38s} {'n':>4} {'accept':>7} {'95% CI':>15} {'=diff%':>7} {'shift':>6} {'wf%':>5} {'ans%':>5} {'leak-ok%':>8} {'hardfail%':>9}")
     for (m, b), c in sorted(cells.items()):
         ci = f"[{c['ci95'][0]:.2f},{c['ci95'][1]:.2f}]" if c["ci95"] else "—"
         print(f"{m + ' / ' + b:38s} {c['n_items_labeled']:>4} "
               f"{('%.0f%%'%(100*c['acceptance_rate'])) if c['acceptance_rate'] is not None else '—':>7} {ci:>15} "
-              f"{str(c['mean_faithful']):>6} "
+              f"{str(c['pct_same_difficulty']):>7} {str(c['mean_difficulty_shift']):>6} "
               f"{str(c['pct_wellformed']):>5} {str(c['pct_answer_correct']):>5} "
               f"{str(c['pct_no_leak']):>8} {str(c['triage_hard_fail_pct']):>9}")
     print(f"\nagreement: {agreement}")

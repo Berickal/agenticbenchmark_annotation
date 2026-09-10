@@ -64,18 +64,18 @@ Local preview: `cd docs && python -m http.server 8777` →
 python annotation/aggregate.py annotation/annotations/*.json
 ```
 
-Per cell: acceptance rate (per-item majority verdict) + Wilson 95% CI, mean
-faithfulness, % well-formed / answer-correct / no-leak,
-and the triage hard-fail rate of the sampled run. Plus Cohen's κ and pairwise
-agreement on the overlap subset, and every reject with its note. Full JSON in
-`annotation/results.json`.
+Per cell: acceptance rate (per-item majority verdict) + Wilson 95% CI,
+% same-difficulty, mean difficulty shift, % well-formed /
+answer-correct / no-leak, and the triage hard-fail rate of the sampled run.
+Plus Cohen's κ and pairwise agreement on the overlap subset, and every reject
+with its note. Full JSON in `annotation/results.json`.
 
 ## Rubric
 
 | field | scale | meaning |
 |---|---|---|
 | `wellformed` | yes/no | mutated problem makes sense and is answerable |
-| `faithful` | 1–4 | same skill/knowledge at comparable difficulty |
+| `difficulty` | much easier / easier / same / harder / much harder | hardness of the mutated item vs. the original |
 | `answer_correct` | yes/no/unsure | shown expected answer is right for the mutated item |
 | `tests_ok` | yes/no/na | (code) updated assertions valid & consistent |
 | `no_leak` | yes/no | prompt doesn't state/hint the answer (passage-grounded RC excepted) |

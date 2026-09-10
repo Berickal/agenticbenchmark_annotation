@@ -117,8 +117,10 @@
   /* ── rubric ── */
   .rubric{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     padding:6px 18px;margin-top:18px;box-shadow:var(--shadow)}
-  .q{padding:13px 0;border-bottom:1px solid var(--line-2)}
+  .q{padding:13px 0;border-bottom:1px solid var(--line-2);border-left:3px solid transparent;
+    margin-left:-18px;padding-left:15px;transition:border-color .15s,background .15s}
   .q:last-child{border-bottom:0}
+  .q.missing{border-left-color:var(--bad);background:var(--bad-soft)}
   .q .qt{font-weight:650;margin-bottom:7px}
   .q .qh{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
   .opts{display:flex;gap:7px;flex-wrap:wrap}
@@ -144,6 +146,8 @@
   .done-dot.on{background:var(--good);box-shadow:0 0 0 3px var(--good-soft)}
   .hint{color:var(--muted);font-size:12px;margin-top:8px}
   .hint kbd{margin:0 1px}
+  button.blocked{opacity:.55;border-style:dashed}
+  .needsall{color:var(--bad);font-size:13px;font-weight:600;margin-top:8px}
 </style>
 </head>
 <body>
@@ -154,9 +158,9 @@ const RUBRIC = [
   {k:"wellformed", t:"Well-formed & solvable?",
    h:"The mutated problem is coherent and can actually be answered as stated (no missing info, no contradiction, no garbled text).",
    opts:[["yes","Yes"],["no","No"]]},
-  {k:"faithful", t:"Same skill & comparable difficulty? (1–4)",
-   h:"Does solving the mutated item exercise the same kind of reasoning/knowledge, at a similar difficulty, as the original? This is NOT about getting the same answer. 1 = unrelated or much easier/harder · 4 = same competency & difficulty.",
-   opts:[["1","1"],["2","2"],["3","3"],["4","4"]]},
+  {k:"difficulty", t:"Difficulty vs. the original",
+   h:"For someone solving it from scratch, how hard is the mutated item compared with the original? A good mutation stays about the same.",
+   opts:[["1","Much easier"],["2","Easier"],["3","Same"],["4","Harder"],["5","Much harder"]]},
   {k:"answer_correct", t:"Reference answer correct for the mutated item?",
    h:"Independently work out the mutated problem and check the shown expected answer (and, for code, the reference solution).",
    opts:[["yes","Yes"],["no","No"],["unsure","Unsure"]]},
@@ -171,20 +175,25 @@ const RUBRIC = [
    opts:[["accept","Accept"],["reject","Reject"]], cls:true},
 ];
 const REQUIRED = RUBRIC.filter(q=>!q.codeOnly).map(q=>q.k);
+const GATED = true;   // require every rubric row answered before advancing to the next item
+let blocked = false;  // set when a forward move was blocked -> highlights the missing rows
+
+function requiredFor(it){ return RUBRIC.filter(q=>!q.codeOnly || it.kind==="code").map(q=>q.k); }
+function missingFor(it){ const r=STORE[it.id]||{}; return requiredFor(it).filter(k=>r[k]==null||r[k]===""); }
 
 const $ = (s,el=document)=>el.querySelector(s);
 const el = (t,props={},...kids)=>{const e=document.createElement(t);
   for(const k in props){ if(k==="html") e.innerHTML=props[k]; else e[k]=props[k]; }
   for(const k of kids) if(k!=null&&k!=="") e.append(k); return e;};
 
-let POOLS={}, POOL=[], KEYSET=[], NAME=null, POOL_ID=null, STORE={}, idx=0;
+let POOLS={}, POOL=[], KEYSET=[], ITEMS={}, NAME=null, POOL_ID=null, STORE={}, idx=0;
 
 const slug = s => String(s||"").trim().toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const skKey = ()=>"abv4_pools_ans_"+slug(NAME);
 function load(){ try{ STORE = JSON.parse(localStorage.getItem(skKey())||"{}"); }catch{ STORE={}; } }
 function save(){ try{ localStorage.setItem(skKey(), JSON.stringify(STORE)); }catch{} }
 function rec(id){ return STORE[id] || (STORE[id]={}); }
-function isDone(id){ const r=STORE[id]||{}; return REQUIRED.every(k=>r[k]!=null && r[k]!==""); }
+function isDone(id){ return ITEMS[id] ? missingFor(ITEMS[id]).length===0 : false; }
 function doneCount(){ return KEYSET.filter(isDone).length; }
 
 async function boot(){
@@ -242,6 +251,7 @@ function startApp(name){
   NAME = name;
   POOL = (POOLS[POOL_ID]||[]).slice();
   KEYSET = POOL.map(it=>it.id);
+  ITEMS = Object.fromEntries(POOL.map(it=>[it.id,it]));
   load();
   idx = Math.max(0, KEYSET.findIndex(id=>!isDone(id)));
   if(idx<0) idx=0;
@@ -256,26 +266,29 @@ function guidelines(){
   g.addEventListener("toggle",()=>{ if(!g.open) localStorage.setItem("abv4_guide_seen","1"); });
   g.append(el("summary",{},
     el("span",{className:"chev",textContent:"▸"}),
-    "Task & guidelines"));
+    "Task & guidelines — read once, then collapse"));
   const b = el("div",{className:"body"});
   b.innerHTML = `
   <h4>What this is</h4>
   <p>An automated pipeline takes an existing benchmark problem (HumanEval, MBPP, GSM8K,
   TruthfulQA, BBC reading-comprehension) and rewrites it with an LLM to produce a
-  <b>mutated</b> variant with a new scenario, new numbers, sometimes a changed question plus an
+  <b>mutated</b> variant — a new scenario, new numbers, sometimes a changed question — plus an
   updated reference answer (and updated unit tests for code). The point is to test whether a
   model really reasons or just recognises memorised benchmark items.</p>
-  <p>Your job: for each item, evaluate the <b>mutated</b> version
-     and decide whether the mutated item is a <b>valid, usable</b> benchmark problem.</p>
+  <p>Your job: for each item, look at the <b>original</b> (left) and the <b>mutated</b> version
+  (right) and decide whether the mutated item is a <b>valid, usable</b> benchmark problem.</p>
 
   <h4>How it works</h4>
   <ul>
-    <li>Answer the short rubric under each item. It auto-saves in this browser as you go.</li>
+    <li>You’ve been assigned one review set (shown in the header). Everyone in a set sees the
+        same items; a few are shared across sets for calibration. Just go through them all.</li>
+    <li>Answer the short rubric under each item — <b>every row is required</b> before you can
+        move to the next item. It auto-saves in this browser as you go.</li>
     <li>Use <kbd>←</kbd>/<kbd>→</kbd> to move, number keys and <kbd>Y</kbd>/<kbd>N</kbd>/<kbd>U</kbd>
-        to fill the next unanswered row, <em>Next unanswered</em> to skip ahead.</li>
+        to fill the next unanswered row. You can always go <em>back</em>.</li>
     <li>When finished (or done for the session) click <b>Export</b> and send the downloaded
-        <code>annotations_&lt;you&gt;.json</code> to the Euraste.</li>
-    <li>Work in a single browser on one machine because progress lives only in local storage.</li>
+        <code>annotations_&lt;you&gt;_&lt;set&gt;.json</code> to the study owner.</li>
+    <li>Work in a single browser on one machine — progress lives only in local storage.</li>
   </ul>
 
   <div class="callout key"><b>The mutated problem does NOT need to have the same answer as the
@@ -287,12 +300,12 @@ function guidelines(){
   <i>for the mutated problem</i>.</div>
 
   <div class="callout"><b>The reference answer was also produced by an LLM</b> and may be wrong.
-  Checking it (“Reference answer correct?”) is one of the main reasons this review exists. You can test
+  Checking it (“Reference answer correct?”) is one of the main reasons this review exists — work
   the mutated problem yourself before answering.</div>
 
   <div class="callout"><b>You are blind to which model generated each mutation.</b> Judge every
   item on its own merits. Don’t reward or penalise an item for looking similar to, or very
-  different from, the original.</div>
+  different from, the original — only for the criteria below.</div>
 
   <div class="callout"><b>Reading-comprehension items (BBC):</b> the answer is meant to be
   recoverable from the passage. That is not an “answer leak”. A leak is when the question or
@@ -301,10 +314,10 @@ function guidelines(){
   <h4>Rubric</h4>
   <dl class="glossary">
     <dt>Well-formed &amp; solvable</dt><dd>Coherent, complete, answerable as written. Empty or garbled input → No.</dd>
-    <dt>Same skill &amp; difficulty (1–4)</dt><dd>Same kind of reasoning/knowledge at a similar level. Not about matching the answer.</dd>
+    <dt>Difficulty vs. original</dt><dd>Much easier · Easier · Same · Harder · Much harder — a good mutation is about the same.</dd>
     <dt>Reference answer correct</dt><dd>Solve the mutated item yourself; does the shown expected answer match? “Unsure” if you genuinely can’t verify.</dd>
     <dt>Updated tests valid (code)</dt><dd>Assertions parse and every one agrees with the shown reference solution.</dd>
-    <dt>No answer leak / hint</dt><dd>Input doesn’t give the answer away (for example, in the reading comprehension items, only the passage and the question should be present in the input but not the answer to the question. Same for code synthesis (Only the problem statement)).</dd>
+    <dt>No answer leak / hint</dt><dd>Prompt doesn’t give the answer away (RC passages excepted, see above).</dd>
     <dt>Overall verdict</dt><dd><b>Accept</b> a usable item; <b>Reject</b> if broken, wrong reference answer, leaked, or not testing the same thing. Add a note when you reject.</dd>
   </dl>`;
   g.append(b);
@@ -323,6 +336,7 @@ function renderApp(){
   head.append(bar,count);
   head.append(el("button",{className:"ghost",textContent:"Guidelines",onclick:()=>{
     const g=$(".guide"); if(g){ g.open=true; g.scrollIntoView({behavior:"smooth"}); }}}));
+  head.append(el("button",{className:"ghost",textContent:"Reset",onclick:resetProgress}));
   head.append(el("button",{className:"primary",textContent:"Export ⬇",onclick:exportJSON}));
   app.append(head);
 
@@ -398,11 +412,13 @@ function renderCard(host){
       if(q.cls && v==="reject") lab.className="reject";
       const inp = el("input",{type:"radio",name:q.k+"_"+it.id,value:v});
       inp.checked = r[q.k]===v;
-      inp.onchange = ()=>{ rec(it.id)[q.k]=v; rec(it.id).ts=Date.now(); save(); _refresh(); };
+      inp.onchange = ()=>{ rec(it.id)[q.k]=v; rec(it.id).ts=Date.now(); save();
+        if(missingFor(it).length===0) blocked=false; _refresh(); };
       lab.append(inp, el("span",{textContent:txt}));
       opts.append(lab);
     });
     box.append(opts);
+    if(blocked && missingFor(it).includes(q.k)) box.classList.add("missing");
     rub.append(box);
   });
   const nt = el("div",{className:"q"});
@@ -414,45 +430,72 @@ function renderCard(host){
   c.append(rub);
 
   // nav
+  const done = isDone(it.id);
   const nav = el("nav");
   nav.append(el("button",{textContent:"← Prev",onclick:()=>go(idx-1)}));
-  nav.append(el("button",{textContent:"Next →",onclick:()=>go(idx+1)}));
+  const nextBtn = el("button",{textContent:"Next →",className:(GATED && !done)?"blocked":"",
+    onclick:()=>tryAdvance(idx+1)});
+  nav.append(nextBtn);
   const jump = el("input",{className:"jump",type:"number",min:1,max:KEYSET.length,value:idx+1});
-  jump.onchange = ()=> go(parseInt(jump.value,10)-1);
+  jump.onchange = ()=>{ const t=parseInt(jump.value,10)-1;
+    (t<idx || !GATED) ? go(t) : tryAdvance(t); };
   nav.append(jump);
-  nav.append(el("span",{className:"done-dot"+(isDone(it.id)?" on":""),title:isDone(it.id)?"answered":"not answered"}));
+  nav.append(el("span",{className:"done-dot"+(done?" on":""),title:done?"answered":"not answered"}));
   nav.append(el("span",{className:"spacer"}));
-  nav.append(el("button",{textContent:"Next unanswered ⇢",onclick:()=>{
-    const n = KEYSET.findIndex((id,i)=> i>idx && !isDone(id));
-    go(n>=0?n:KEYSET.findIndex(id=>!isDone(id)));
-  }}));
+  if(!GATED){
+    nav.append(el("button",{textContent:"Next unanswered ⇢",onclick:()=>{
+      const n = KEYSET.findIndex((id,i)=> i>idx && !isDone(id));
+      go(n>=0?n:KEYSET.findIndex(id=>!isDone(id)));
+    }}));
+  }
   c.append(nav);
+  if(GATED && blocked && !done){
+    c.append(el("div",{className:"needsall",textContent:"Answer every question on this item before moving on."}));
+  }
   c.append(el("div",{className:"hint",html:
     "<kbd>←</kbd> <kbd>→</kbd> move · <kbd>1</kbd>–<kbd>4</kbd> / <kbd>Y</kbd> <kbd>N</kbd> <kbd>U</kbd> "
-    +"fill the next unanswered row · answers auto-save in this browser."}));
+    +"fill the next row · answers auto-save in this browser."
+    + (GATED ? " Every row is required to advance." : "")}));
 
   host.replaceChildren(c);
 }
 
 function fmtTests(t){ return Array.isArray(t) ? t.join("\n") : String(t); }
-function go(i){ idx = Math.max(0, Math.min(KEYSET.length-1, i)); _refresh(); scrollTo({top:0,behavior:"smooth"}); }
+function go(i){ blocked=false; idx = Math.max(0, Math.min(KEYSET.length-1, i)); _refresh(); scrollTo({top:0,behavior:"smooth"}); }
+function tryAdvance(i){
+  const it = POOL[idx];
+  if(GATED && i>idx && missingFor(it).length){
+    blocked = true; _refresh();
+    const m = document.querySelector(".rubric .q.missing");
+    if(m) m.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+  go(i);
+}
 
 function onKey(e){
   const ae=document.activeElement;
   if(/TEXTAREA/.test(ae.tagName)) return;
   if(/INPUT/.test(ae.tagName) && ae.type!=="radio") return;
   if(e.key==="ArrowLeft") return go(idx-1);
-  if(e.key==="ArrowRight") return go(idx+1);
+  if(e.key==="ArrowRight") return tryAdvance(idx+1);
   const it = POOL[idx];
   const map = {y:"yes",n:"no",u:"unsure",a:"accept",r:"reject"};
-  const val = map[e.key.toLowerCase()] ?? (/^[1-4]$/.test(e.key) ? e.key : null);
+  const val = map[e.key.toLowerCase()] ?? (/^[1-5]$/.test(e.key) ? e.key : null);
   if(val==null) return;
   for(const q of RUBRIC){
     if(q.codeOnly && it.kind!=="code") continue;
     if(q.opts.some(([v])=>v===val) && rec(it.id)[q.k]==null){
-      rec(it.id)[q.k]=val; rec(it.id).ts=Date.now(); save(); _refresh(); return;
+      rec(it.id)[q.k]=val; rec(it.id).ts=Date.now(); save(); if(missingFor(it).length===0) blocked=false; _refresh(); return;
     }
   }
+}
+
+function resetProgress(){
+  const n = doneCount();
+  if(!confirm(`Clear your ${n} saved answer${n===1?"":"s"} on this device and start over? This cannot be undone.`)) return;
+  try{ localStorage.removeItem(skKey()); }catch{}
+  STORE = {}; blocked = false; idx = 0; _refresh();
 }
 
 function exportJSON(){

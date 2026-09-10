@@ -28,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from annotation.common import ROOT, benchmark_kind  # noqa: E402
 
 ANN = ROOT / "annotation"
+_DIFF = {1: "much_easier", 2: "easier", 3: "same", 4: "harder", 5: "much_harder"}
 
 
 def wilson(k, n, z=1.96):
@@ -120,13 +121,18 @@ def main(argv=None) -> int:
         verdicts = [v for v in verdicts if v]
         k = sum(v == "accept" for v in verdicts)
         p, lo, hi = wilson(k, len(verdicts))
-        wf = [l.get("wellformed") for i in ids for l in labels.get(i, [])]
-        ac = [l.get("answer_correct") for i in ids for l in labels.get(i, [])]
-        nl = [l.get("no_leak") for i in ids for l in labels.get(i, [])]
-        fa = [float(l["faithful"]) for i in ids for l in labels.get(i, []) if l.get("faithful")]
+        alll = [l for i in ids for l in labels.get(i, [])]
+        wf = [l.get("wellformed") for l in alll]
+        ac = [l.get("answer_correct") for l in alll]
+        nl = [l.get("no_leak") for l in alll]
+        diff = [int(l["difficulty"]) for l in alll if str(l.get("difficulty", "")).isdigit()]
+        dist = Counter(_DIFF.get(d) for d in diff)
         return {"n_items": len(verdicts), "acceptance": p, "ci95": [lo, hi],
                 "pct_wellformed": _pct(wf), "pct_answer_correct": _pct(ac, {"yes", "no"}),
-                "pct_no_leak": _pct(nl), "mean_faithful": round(statistics.mean(fa), 2) if fa else None}
+                "pct_no_leak": _pct(nl),
+                "pct_same_difficulty": round(100 * dist["same"] / len(diff), 1) if diff else None,
+                "mean_difficulty_shift": round(statistics.mean([d - 3 for d in diff]), 2) if diff else None,
+                "difficulty_dist": {k: dist.get(k, 0) for k in _DIFF.values()}}
 
     core = [i for i in key if role_of(i) == "core"]
     by_fam = defaultdict(list)
@@ -192,12 +198,16 @@ def main(argv=None) -> int:
     o = results["overall"]
     print(f"\noverall acceptance: {o['acceptance']:.0%}  95% CI [{o['ci95'][0]:.0%}, {o['ci95'][1]:.0%}]  "
           f"(n={o['n_items']} core items)   Fleiss κ = {results['fleiss_kappa']['overall']}")
-    print(f"\n{'group':26s} {'n':>4} {'accept':>7} {'95% CI':>13} {'faith':>6} {'wf%':>5} {'ans%':>5} {'leak%':>6}")
+    print(f"\n{'group':26s} {'n':>4} {'accept':>7} {'95% CI':>13} {'=diff%':>7} {'shift':>6} {'wf%':>5} {'ans%':>5} {'leak%':>6}")
     for label, blk in [("family:"+f, b) for f, b in results["by_task_family"].items()] \
                     + [("pool:"+p, b) for p, b in results["by_pool"].items()]:
         ci = f"[{blk['ci95'][0]:.0%},{blk['ci95'][1]:.0%}]"
         print(f"{label:26s} {blk['n_items']:>4} {blk['acceptance']*100:>6.0f}% {ci:>13} "
-              f"{str(blk['mean_faithful']):>6} {str(blk['pct_wellformed']):>5} {str(blk['pct_answer_correct']):>5} {str(blk['pct_no_leak']):>6}")
+              f"{str(blk['pct_same_difficulty']):>7} {str(blk['mean_difficulty_shift']):>6} "
+              f"{str(blk['pct_wellformed']):>5} {str(blk['pct_answer_correct']):>5} {str(blk['pct_no_leak']):>6}")
+    od = results["overall"]["difficulty_dist"]
+    print(f"\ndifficulty vs original (overall): " + "  ".join(f"{k}={v}" for k, v in od.items())
+          + f"   mean shift {results['overall']['mean_difficulty_shift']} (– easier / + harder)")
     print(f"\nper model/benchmark (n<10 flagged):")
     for k, b in results["by_model_benchmark"].items():
         print(f"  {k:34s} n={b['n_items']:>2} accept={b['acceptance']*100:>3.0f}%" + ("  ⚠low-n" if b["low_n"] else ""))
